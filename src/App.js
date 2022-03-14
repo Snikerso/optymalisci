@@ -6,8 +6,7 @@ function App() {
     <div className="App">
 
     <p>
-      Paragraf Bartka.
-      Siema, spróbuje teraz bez tokena zpushować.
+      Koniec Dnia.
     </p>
 
     </div>
