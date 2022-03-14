@@ -8,7 +8,7 @@ function App() {
     <p>
       Paragraf Bartka.
       Siema, spróbuje teraz bez tokena zpushować.   eeeeee
-      <span>paweł</span>
+      <span>pawełdadsada</span>
     </p>
 
     </div>
