@@ -1,18 +1,24 @@
 import './App.css';
-import {
-  Router
-} from "react-router-dom"
+import {BrowserRouter,Routes, Route} from "react-router-dom"
+import {SnikersView} from "./views/SnikersView"
+import {BartusView} from "./views/BartusView"
+
 
 function App() {
+  
+
   return (
     <>
-    <div className="App">
-
-    <p>
-      Koniec Dnia.
-    </p>
-
-    </div>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<div>Home</div>} />
+            <Route path='bartus' element={<BartusView />} />
+            <Route path='kanonashi' element={<div>Kanonashi</div>} />
+            <Route path='snikers' element={<SnikersView />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </>
   );
 }
