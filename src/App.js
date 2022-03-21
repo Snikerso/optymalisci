@@ -1,9 +1,13 @@
 import './App.css';
+<<<<<<< Updated upstream
 import {BrowserRouter,Routes, Route} from "react-router-dom"
 import {SnikersView} from "./views/SnikersView"
 import {BartusView} from "./views/BartusView"
 import {KanonashiView} from "./views/KanonashiView"
 
+=======
+import {BrowserRouter, Routers, Route} from "react-router-dom";
+>>>>>>> Stashed changes
 
 function App() {
   
