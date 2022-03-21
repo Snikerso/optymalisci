@@ -5,4 +5,4 @@ export const BartusView = () => {
     
     <Link to={"/"}> Back to home </Link> 
     </div>
-}
+};
