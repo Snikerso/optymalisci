@@ -12,6 +12,11 @@ function App() {
       <div className="App">
         <BrowserRouter>
           <Link  to="/snikers">Link</Link>
+<<<<<<< HEAD
+          <Link to="/bartus">Tutaj do bartusia!</Link>
+=======
+          <Link to="/kanonashi">Link2</Link>
+>>>>>>> 7f5c131bc0926a7871ad94f463bfb5e6b46cf214
           <Routes>
             <Route index element={<div>Home</div>} />
             <Route path='bartus' element={<BartusView />} />
