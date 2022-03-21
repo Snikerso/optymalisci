@@ -13,6 +13,7 @@ function App() {
       <div className="App">
         <BrowserRouter>
           <Link  to="/snikers">Link</Link>
+          <Link to="/kanonashi">Link2</Link>
           <Routes>
             <Route index element={<div>Home</div>} />
             <Route path='bartus' element={<BartusView />} />
