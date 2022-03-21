@@ -4,9 +4,8 @@ import {SnikersView} from "./views/SnikersView"
 import {BartusView} from "./views/BartusView"
 import {KanonashiView} from "./views/KanonashiView"
 
-
 function App() {
-  
+
 
   return (
     <>
