@@ -10,12 +10,12 @@ function App() {
     <>
       <div className="App">
         <BrowserRouter>
-          <Link to="/snikers">Link to snikersa</Link>
-          <Link to="/bartus">Tutaj do bartusia!</Link>
-          <Link to="/kanonashi">Link2</Link>
+          <Link to="/snikers">Tutaj to Snikersa!</Link><br></br>
+          <Link to="/bartus">Tutaj do bartusia!</Link><br></br>
+          <Link to="/kanonashi">Tutaj do Kanonashi!</Link><br></br>
           <Routes>
-            <Route index element={<div>Home</div>} />
-            <Route path='bartus' element={<BartusView />} />
+            <Route index element={<div><h1>Home</h1></div>} />
+            <Route path='bartus' element={<BartusView back={{toSnikers: "/snikers", toKanonashi: "/kanonashi", toHome: "/", textSnikers: "Snikers", textKanonashi: "Kanonashi", textHome: "Home"}} title={"Znajdujesz się na podstronie bartusia."} />} />
             <Route path='kanonashi' element={<KanonashiView />}/>
             <Route path='snikers' element={<SnikersView back={{ to: "/bartus", text:"Back to bartus"}} title={"Moja super podstrona snikera"} />} />
           </Routes>
