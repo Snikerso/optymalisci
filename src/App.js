@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route index element={<div><h1>Home</h1></div>} />
             <Route path='bartus' element={<BartusView back={{toSnikers: "/snikers", toKanonashi: "/kanonashi", toHome: "/", textSnikers: "Snikers", textKanonashi: "Kanonashi", textHome: "Home"}} title={"Znajdujesz się na podstronie bartusia."} />} />
-            <Route path='kanonashi' element={<KanonashiView />}/>
+            <Route path='kanonashi' element={<KanonashiView back={{to: "/snikers", text:"Do Snikersa"}} title={"U Kanonashi"} />} />
             <Route path='snikers' element={<SnikersView back={{ to: "/bartus", text:"Back to bartus"}} title={"Moja super podstrona snikera"} />} />
           </Routes>
         </BrowserRouter>
