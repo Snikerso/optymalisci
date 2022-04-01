@@ -1,3 +1,21 @@
-.bartusDiv {
-  background-image: "url(./bartusViewImage.jpg";
+.bartusBackground{
+  background-image: url("../../../public/bartusViewImage.jpg");
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.bartusDiv{
+
+}
+
+.bartusLink{
+  color: wheat;
+}
+
+.bartusTitle{
+  color: wheat;
 }
