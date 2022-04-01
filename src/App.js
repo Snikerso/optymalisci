@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter,Routes, Route, Link } from "react-router-dom"
+import {BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import {SnikersView} from "./views/SnikersView"
 import {BartusView} from "./views/BartusView"
 import {KanonashiView} from "./views/KanonashiView"

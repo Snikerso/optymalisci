@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import './index.css';
+
 
 export const KanonashiView = ({title, back}) => {
 
