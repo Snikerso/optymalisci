@@ -5,17 +5,22 @@ import {BartusView} from "./views/BartusView"
 import {KanonashiView} from "./views/KanonashiView"
 import { GniewomirXView } from './views/GniewomirXView';
 import {KasperosView} from "./views/KasperosView"
+import {Header} from "./components/organism/Header"
 
 function App() {
 
   return (
     <>
         <BrowserRouter>
-          <Link to="/snikers">Tutaj to Snikersa!</Link><br></br>
-          <Link to="/bartus">Tutaj do bartusia!</Link><br></br>
-          <Link to="/kanonashi">Tutaj do Kanonashi!</Link><br></br>
-          <Link to="/gniewomirx">Tutaj do GniewomirX!</Link><br></br>
-          <Link to="/kasperos">Tutaj do Kasperskiego!</Link><br></br>
+          <Header>
+            <ul>
+              <li><Link to="/snikers">Tutaj to Snikersa!</Link><br></br></li>
+              <li><Link to="/bartus">Tutaj do bartusia!</Link><br></br></li>
+              <li><Link to="/kanonashi">Tutaj do Kanonashi!</Link><br></br></li>
+              <li><Link to="/gniewomirx">Tutaj do GniewomirX!</Link><br></br></li>
+              <li><Link to="/kasperos">Tutaj do Kasperskiego!</Link><br></br></li>
+            </ul>
+          </Header>
           <Routes>
             <Route index element={<div><h1>Home</h1></div>} />
             <Route path='bartus' element={<BartusView back={{toHome: "/", textHome: "Home"}} title={"Znajdujesz się na podstronie bartusia."} />} />
