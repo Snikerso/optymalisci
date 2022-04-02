@@ -1,11 +1,6 @@
-import { Wrapper } from "./styles"
+import React from 'react';
+import { Wrapper } from './styles';
 
-
-export const Header = ({children}) => {
-
-    return(
-        <Wrapper>
-            {children}
-        </Wrapper>
-    )
-}
+export const Header = ({ children }) => {
+  return <Wrapper>{children}</Wrapper>;
+};
