@@ -10,7 +10,6 @@ function App() {
 
   return (
     <>
-      <div className="App">
         <BrowserRouter>
           <Link to="/snikers">Tutaj to Snikersa!</Link><br></br>
           <Link to="/bartus">Tutaj do bartusia!</Link><br></br>
@@ -26,7 +25,6 @@ function App() {
             <Route path='kasperos' element={<KasperosView back={{to: "/kasperos", text:"Do Twojego Starego"}} title={"Zapraszaaam!"} />} />
           </Routes>
         </BrowserRouter>
-      </div>
     </>
   );
 }
