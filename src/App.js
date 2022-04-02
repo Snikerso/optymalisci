@@ -22,7 +22,7 @@ function App() {
             </ul>
           </Header>
           <Routes>
-            <Route index element={<div><h1>Home</h1></div>} />
+            <Route index element={<div><h1 className="home_title">Home</h1></div>} />
             <Route path='bartus' element={<BartusView back={{toHome: "/", textHome: "Home"}} title={"Znajdujesz się na podstronie bartusia."} />} />
             <Route path='kanonashi' element={<KanonashiView back={{to: "/snikers", text:"Do Snikersa"}} title={"U Kanonashi"} />} />
             <Route path='gniewomirx' element={<GniewomirXView back={{to: "/snikers", text:"Do Snikersa"}} title={"U Gniewka"} />} />
