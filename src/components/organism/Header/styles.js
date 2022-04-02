@@ -11,9 +11,12 @@ export const Wrapper = styled.div`
     display: flex;
     gap:50px;
     justify-content: center;
-    text-decoration: none;
     font-size: 1.5rem;
     font-family: "Comic Sans MS";
     list-style-type: disc;
+  }
+  
+  a{
+    text-decoration: none;
   }
 `
