@@ -19,3 +19,9 @@
 .bartusTitle{
   color: wheat;
 }
+
+.bartusDiscordGoal{
+  background-image: url("../../../public/bartusDiscordGoal.png");
+  width: 594px;
+  height: 415px;
+}
