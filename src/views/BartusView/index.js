@@ -1,10 +1,9 @@
 import React from 'react';
 import './view.css';
 import { Link } from 'react-router-dom';
-import BarNick from '../../components/atoms/BarNick';
-import BarId from '../../components/atoms/BarId';
 import { BarName } from '../../components/molecules/BarName';
 import { BarDiscord } from '../../components/organism/BarDiscord';
+import Head from '../../components/atoms/Head';
 
 export const BartusView = ({ back, title }) => {
   return (
@@ -15,9 +14,7 @@ export const BartusView = ({ back, title }) => {
         Back to {back.textHome}
       </Link>
       <br></br>
-      <BarNick>bartus</BarNick><BarId>#7376</BarId>
-      <br></br>
-      <BarName nick='bartus' id='#7376'></BarName>
+      {/* <Head nick='bartus' id='#7376'></Head>*/}
       <br></br>
       <BarDiscord></BarDiscord>
       <br></br>

@@ -5,7 +5,7 @@ import { Wrapper } from './styles';
 export const Card = ({ title, description, children, goals = [] }) => {
   return (
     <Wrapper>
-      <Head fontSize={'18'}>{title}</Head>
+      <Head fontSize={'18'} color={'red'}>{title}</Head>
       <p>{description}</p>
       {/* TODO dodać if goals to wyswietli tytuł */}
       {/* TODO wylistować cele na ten miesiąc */}

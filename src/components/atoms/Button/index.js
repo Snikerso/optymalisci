@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const BarEdit = styled.button`
+export const Button = styled.button`
     width: 180px;
     height: 32px;
     color: white;
@@ -9,4 +9,4 @@ export const BarEdit = styled.button`
     font-family: "Comic Sans MS";
     text-align: center;
 `
-export default BarEdit
+export default Button
