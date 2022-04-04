@@ -1,6 +1,15 @@
-import styled from 'styled-components'
+import React, { useState } from 'react';
+import Button from '../Button';
+import { StyledCounter } from './styles';
 
-export const Counter = styled.div`
-    font-size: ${({fontSize}) => 2*fontSize}px;
+export const Counter = ({ children }) => {
+  const [count, setCount] = useState(0);
 
-`
+  return (
+    <>
+      <Button onClick={() => setCount(count + 1)}>JEB</Button>
+      <StyledCounter fontSize={count}>{count}</StyledCounter>
+      {children}
+    </>
+  );
+};
