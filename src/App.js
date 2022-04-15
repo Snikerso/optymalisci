@@ -7,6 +7,31 @@ import { KanonashiView } from './views/KanonashiView';
 import { GniewomirXView } from './views/GniewomirXView';
 import { KasperosView } from './views/KasperosView';
 import { Header } from './components/organism/Header';
+import { HomeView } from './views/HomeView';
+
+const optymalists = [
+  {
+    id: 1,
+    to: '/snikers',
+    text: 'Do Snikersa',
+    title: 'Snikers',
+    back: { toHome: '/', textHome: 'Home' }
+  },
+  {
+    id: 2,
+    to: '/snikers',
+    text: 'Do Snikersa',
+    title: '',
+    back: { toHome: '/', textHome: 'Home' }
+  },
+  {
+    id: 3,
+    to: '/snikers',
+    text: 'Do Snikersa',
+    title: 'Snikers',
+    back: { toHome: '/', textHome: 'Home' }
+  }
+];
 
 function App() {
   return (
@@ -15,36 +40,19 @@ function App() {
         <Header>
           <ul>
             <li>
-              <Link to="/snikers">Tutaj to Snikersa!</Link>
+              <Link to="/">HomePage</Link>
               <br></br>
             </li>
-            <li>
-              <Link to="/bartus">Tutaj do bartusia!</Link>
-              <br></br>
-            </li>
-            <li>
-              <Link to="/kanonashi">Tutaj do Kanonashi!</Link>
-              <br></br>
-            </li>
-            <li>
-              <Link to="/gniewomirx">Tutaj do GniewomirX!</Link>
-              <br></br>
-            </li>
-            <li>
-              <Link to="/kasperos">Tutaj do Kasperskiego!</Link>
-              <br></br>
-            </li>
+            {optymalists.map((item) => (
+              <li key={item.id}>
+                <Link to={item.to}>{item.text}</Link>
+                <br></br>
+              </li>
+            ))}
           </ul>
         </Header>
         <Routes>
-          <Route
-            index
-            element={
-              <div>
-                <h1 className="home_title">Home</h1>
-              </div>
-            }
-          />
+          <Route index element={<HomeView optymalists={optymalists} />} />
           <Route
             path="bartus"
             element={
