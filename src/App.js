@@ -14,14 +14,14 @@ const optymalists = [
     id: 1,
     to: '/snikers',
     text: 'Do Snikersa',
-    title: 'Snikers',
+    title: 'Bartus',
     back: { toHome: '/', textHome: 'Home' }
   },
   {
     id: 2,
     to: '/snikers',
     text: 'Do Snikersa',
-    title: '',
+    title: 'Kasperos',
     back: { toHome: '/', textHome: 'Home' }
   },
   {
