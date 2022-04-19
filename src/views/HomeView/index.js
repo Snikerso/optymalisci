@@ -3,19 +3,15 @@ import { Link } from 'react-router-dom';
 
 export const HomeView = ({ optymalists }) => {
   const [typeSort, setTypeSort] = useState('Ascending');
-  const [newOptymalist, setNewOptymalist] = useState(optymalists);
+  let newOp = optymalists;
 
-  useEffect(() => {
-    console.log(typeSort);
-    const newArray = newOptymalist.sort((a, b) => {
-      if (typeSort === 'Ascending') {
-        if (a.title > b.title) return -1;
-      } else {
-        if (a.title < b.title) return -1;
-      }
-    });
-    setNewOptymalist(newArray);
-  }, [typeSort]);
+  newOp = newOp.sort((a, b) => {
+    if (typeSort === 'Ascending') {
+      if (a.title > b.title) return -1;
+    } else {
+      if (a.title < b.title) return -1;
+    }
+  });
 
   return (
     <div>
@@ -24,7 +20,7 @@ export const HomeView = ({ optymalists }) => {
         onClick={() => setTypeSort((prev) => (prev === 'Ascending' ? 'Descending' : 'Ascending'))}>
         {typeSort}
       </button>
-      {newOptymalist.map((item) => {
+      {newOp.map((item) => {
         if (item.title === '') {
           return null;
         }

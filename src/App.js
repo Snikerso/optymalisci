@@ -14,24 +14,42 @@ const optymalists = [
     id: 1,
     to: '/snikers',
     text: 'Do Snikersa',
-    title: 'Bartus',
+    title: 'Snikersa',
     back: { toHome: '/', textHome: 'Home' }
   },
   {
     id: 2,
-    to: '/snikers',
-    text: 'Do Snikersa',
+    to: '/kasperos',
+    text: 'Do Kasperos',
     title: 'Kasperos',
     back: { toHome: '/', textHome: 'Home' }
   },
   {
     id: 3,
-    to: '/snikers',
-    text: 'Do Snikersa',
-    title: 'Snikers',
+    to: '/gniewomirx',
+    text: 'Do Gniewka',
+    title: 'Gniewka',
+    back: { toHome: '/', textHome: 'Home' }
+  },
+  {
+    id: 4,
+    to: '/kanonashi',
+    text: 'Do Kanonoashi',
+    title: 'Kanonoashi',
+    back: { toHome: '/', textHome: 'Home' }
+  },
+  {
+    id: 5,
+    to: '/bartus',
+    text: 'Do Bartus',
+    title: 'Bartus',
     back: { toHome: '/', textHome: 'Home' }
   }
 ];
+
+const OptimalistName = ({ text }) => {
+  return <div style={{ display: 'flex' }}>{text}</div>;
+};
 
 function App() {
   return (
@@ -43,12 +61,15 @@ function App() {
               <Link to="/">HomePage</Link>
               <br></br>
             </li>
-            {optymalists.map((item) => (
-              <li key={item.id}>
-                <Link to={item.to}>{item.text}</Link>
-                <br></br>
-              </li>
-            ))}
+            {optymalists.map((item, index) => {
+              return (
+                <>
+                  <Link to={item.to} key={item.id}>
+                    <OptimalistName text={index + 1 + '.' + item.title} />
+                  </Link>
+                </>
+              );
+            })}
           </ul>
         </Header>
         <Routes>
@@ -70,9 +91,7 @@ function App() {
           />
           <Route
             path="gniewomirx"
-            element={
-              <GniewomirXView back={{ to: '/snikers', text: 'Do Snikersa' }} title={'U Gniewka'} />
-            }
+            element={<GniewomirXView back={{ to: '/', text: 'Do Snikersa' }} title={'U Gniewka'} />}
           />
           <Route
             path="snikers"
