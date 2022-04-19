@@ -63,15 +63,18 @@ function App() {
             </li>
             {optymalists.map((item, index) => {
               return (
-                <>
-                  <Link to={item.to} key={item.id}>
+                <li key={item.id}>
+                  <Link to={item.to} >
                     <OptimalistName text={index + 1 + '.' + item.title} />
                   </Link>
-                </>
+                </li>
               );
             })}
           </ul>
         </Header>
+
+
+
         <Routes>
           <Route index element={<HomeView optymalists={optymalists} />} />
           <Route
