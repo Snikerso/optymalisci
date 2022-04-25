@@ -10,7 +10,6 @@ export const HomeView = ({ optymalists }) => {
 
       <input
         type="text"
-        onClick
         onChange={(event) => {
           setInputTitle(event.target.value);
         }}
