@@ -53,70 +53,66 @@ const OptimalistName = ({ text }) => {
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Header>
-          <ul>
-            <li>
-              <Link to="/">HomePage</Link>
-              <br></br>
-            </li>
-            {optymalists.map((item, index) => {
-              return (
-                <li key={item.id}>
-                  <Link to={item.to} >
-                    <OptimalistName text={index + 1 + '.' + item.title} />
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </Header>
+    <BrowserRouter>
+      <Header>
+        <ul>
+          <li>
+            <Link to="/">HomePage</Link>
+            <br></br>
+          </li>
+          {optymalists.map((item, index) => {
+            return (
+              <li key={item.id}>
+                <Link to={item.to}>
+                  <OptimalistName text={index + 1 + '.' + item.title} />
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </Header>
 
-
-
-        <Routes>
-          <Route index element={<HomeView optymalists={optymalists} />} />
-          <Route
-            path="bartus"
-            element={
-              <BartusView
-                back={{ toHome: '/', textHome: 'Home' }}
-                title={'Znajdujesz się na podstronie bartusia.'}
-              />
-            }
-          />
-          <Route
-            path="kanonashi"
-            element={
-              <KanonashiView back={{ to: '/snikers', text: 'Do Snikersa' }} title={'U Kanonashi'} />
-            }
-          />
-          <Route
-            path="gniewomirx"
-            element={<GniewomirXView back={{ to: '/', text: 'Do Snikersa' }} title={'U Gniewka'} />}
-          />
-          <Route
-            path="snikers"
-            element={
-              <SnikersView
-                back={{ to: '/bartus', text: 'Back to bartus' }}
-                title={'Moja super podstrona snikera'}
-              />
-            }
-          />
-          <Route
-            path="kasperos"
-            element={
-              <KasperosView
-                back={{ to: '/kasperos', text: 'Do Twojego Starego' }}
-                title={'Zapraszaaam!'}
-              />
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </>
+      <Routes>
+        <Route index element={<HomeView optymalists={optymalists} />} />
+        <Route
+          path="bartus"
+          element={
+            <BartusView
+              back={{ toHome: '/', textHome: 'Home' }}
+              title={'Znajdujesz się na podstronie bartusia.'}
+            />
+          }
+        />
+        <Route
+          path="kanonashi"
+          element={
+            <KanonashiView back={{ to: '/snikers', text: 'Do Snikersa' }} title={'U Kanonashi'} />
+          }
+        />
+        <Route
+          path="gniewomirx"
+          element={<GniewomirXView back={{ to: '/', text: 'Do Snikersa' }} title={'U Gniewka'} />}
+        />
+        <Route
+          path="snikers"
+          element={
+            <SnikersView
+              back={{ to: '/bartus', text: 'Back to bartus' }}
+              title={'Moja super podstrona snikera'}
+            />
+          }
+        />
+        <Route
+          path="kasperos"
+          element={
+            <KasperosView
+              back={{ to: '/kasperos', text: 'Do Twojego Starego' }}
+              title={'Zapraszaaam!'}
+            />
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

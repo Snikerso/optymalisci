@@ -9,6 +9,7 @@ export const HomeView = ({ optymalists }) => {
       <h1>Home PAage</h1>
 
       <input
+        cos="ds"
         type="text"
         onChange={(event) => {
           setInputTitle(event.target.value);
@@ -22,12 +23,12 @@ export const HomeView = ({ optymalists }) => {
           }
         })
         .map((item) => (
-          <>
+          <div key={item.id}>
             <Link to={item.to} key={item.id}>
-              {item.title.toLowerCase()}
+              {item.title.toUpperCase()}
             </Link>
             <br />
-          </>
+          </div>
         ))}
     </div>
   );
