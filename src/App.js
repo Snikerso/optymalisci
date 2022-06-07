@@ -8,6 +8,7 @@ import { GniewomirXView } from './views/GniewomirXView';
 import { KasperosView } from './views/KasperosView';
 import { Header } from './components/organism/Header';
 import { HomeView } from './views/HomeView';
+import { InterpretetionView } from './views/InterpretetionView';
 
 const optymalists = [
   {
@@ -43,6 +44,13 @@ const optymalists = [
     to: '/bartus',
     text: 'Do Bartus',
     title: 'Bartus',
+    back: { toHome: '/', textHome: 'Home' }
+  },
+  {
+    id: 6,
+    to: '/interpretetion',
+    text: 'Do interpretacji',
+    title: 'Interpretacje',
     back: { toHome: '/', textHome: 'Home' }
   }
 ];
@@ -80,6 +88,15 @@ function App() {
             <BartusView
               back={{ toHome: '/', textHome: 'Home' }}
               title={'Znajdujesz się na podstronie bartusia.'}
+            />
+          }
+        />
+        <Route
+          path="interpretetion"
+          element={
+            <InterpretetionView
+              back={{ toHome: '/', textHome: 'Home' }}
+              title={'Znajdujesz się na podstawie światooglądu.'}
             />
           }
         />
